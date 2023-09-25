@@ -1,5 +1,5 @@
 // URLs de la API para productos y proveedores (reemplázalas con las URL correctas)
-const proveedoresApiUrl = 'http://127.0.0.1:8000/proveedores';
+const proveedoresApiUrl = 'https://inventariobackend.onrender.com/proveedores';
 
 // Obtener elementos relevantes
 const dataTable = document.getElementById('dataTable');

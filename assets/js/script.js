@@ -65,7 +65,7 @@ anchoPage();
 
 // logica register y login
 
-const userApiUrl = 'http://127.0.0.1:8000/user';
+const userApiUrl = 'https://inventariobackend.onrender.com/user';
 // Agregar un evento 'submit' al formulario de inicio de sesión
 const loginForm = document.getElementById('loginForm');
 loginForm.addEventListener('submit', login);
