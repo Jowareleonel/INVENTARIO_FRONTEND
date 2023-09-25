@@ -70,7 +70,7 @@ const userApiUrl = 'https://inventariobackend.onrender.com/user';
 const loginForm = document.getElementById('loginForm');
 loginForm.addEventListener('submit', login);
 
-function login(event){
+async function login(event){
     event.preventDefault(); // Prevenir el envío del formulario por defecto
   
     // Obtener los valores del formulario
@@ -94,10 +94,14 @@ function login(event){
       },
       body: JSON.stringify(usuarioData) // Convertir el objeto de usuario a JSON y enviarlo
     })
-    .then(response => {
-        if(response.ok){
-            window.location.href = 'home.html';
-        }
+    .then(response => response.json())
+    .then(data =>{
+      if(data == "sucess"){
+        window.location="home.html";
+      }else{
+        console.log(data)
+        throw data;
+      }
     })
     .catch(error => {
       console.error('Error en la solicitud Fetch:', error);
